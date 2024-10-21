@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System.Collections;
 public class MainMenu : MonoBehaviour
 {
     private int sceneToContinue;
+
     public void PlayGame()
     {
         SceneManager.LoadSceneAsync(1);
@@ -38,6 +39,4 @@ public class MainMenu : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false; //Exit play mode only work when in unity editor
         #endif
     }
-
-
 }

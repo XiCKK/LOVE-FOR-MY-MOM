@@ -41,19 +41,18 @@ public class RatEnemy : MonoBehaviour
         {
             if (walkCheck == false)
             {
-                SoundManager.instance.PlaySound2(RatEffect);
                 walkCheck = true;
             }
         }
         else
         {
-            SoundManager.instance.StopSound(RatEffect);
             walkCheck = false;
         }
     }
 
     private void ChasePlayer()
     {
+        SoundManager.instance.PlaySound2(RatEffect);
         anim.SetBool("RatWalk", true);
         if (transform.position.x < player.position.x)
         {
@@ -69,6 +68,7 @@ public class RatEnemy : MonoBehaviour
     }
     private void StopChasingPlayer()
     {
+        SoundManager.instance.StopSound(RatEffect);
         _rb.velocity = new Vector2(0, 0);
         anim.SetBool("RatWalk", false);
     }
@@ -77,7 +77,7 @@ public class RatEnemy : MonoBehaviour
     {
         if (collision.tag == "PosionWater")
         {
-            StartCoroutine(Reload());
+            StartCoroutine(RatDie());
         }
 
         if (collision.tag == "Player")
@@ -85,7 +85,7 @@ public class RatEnemy : MonoBehaviour
             anim.SetTrigger("Attack");
         }
     }
-    IEnumerator Reload()
+    IEnumerator RatDie()
     {
         anim.SetTrigger("Die");
         yield return new WaitForSeconds(1);

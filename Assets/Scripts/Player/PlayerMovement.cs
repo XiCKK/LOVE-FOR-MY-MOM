@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     [Header("Layers")]
-    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] public LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
 
 
@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private bool isGrounded()
+    public bool isGrounded()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, 
             boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
