@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadSceneAsync(1);
+        Time.timeScale = 1;
     }
 
     public void Continue()
@@ -16,6 +17,7 @@ public class MainMenu : MonoBehaviour
         if (sceneToContinue != 0)
         {
             SceneManager.LoadSceneAsync(sceneToContinue);
+            Time.timeScale = 1;
         }
         else
         {

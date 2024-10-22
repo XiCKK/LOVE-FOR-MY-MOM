@@ -19,7 +19,7 @@ public class CutoutSwitch : MonoBehaviour
     }
     private void Update()
     {
-        if (check == true && Input.GetKey(KeyCode.E))
+        if (check == true)
         {
             SoundManager.instance.PlaySound2(switchOn);
             anim.SetTrigger("CutoutOn");

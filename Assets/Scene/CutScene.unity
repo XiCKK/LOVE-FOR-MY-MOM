@@ -568,7 +568,7 @@ MonoBehaviour:
   textComponent: {fileID: 415360717}
   lines:
   - Go to sleep, honey.
-  textSpeed: 0.1
+  textSpeed: 0
 --- !u!95 &1457687739
 Animator:
   serializedVersion: 5

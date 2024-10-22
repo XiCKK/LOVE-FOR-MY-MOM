@@ -589,7 +589,7 @@ MonoBehaviour:
   textComponent: {fileID: 415360717}
   lines:
   - I'll stay here by your side.
-  textSpeed: 0.1
+  textSpeed: 0
 --- !u!1 &1618151105
 GameObject:
   m_ObjectHideFlags: 0
